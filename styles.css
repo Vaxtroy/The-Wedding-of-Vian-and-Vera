@@ -1,12 +1,12 @@
 :root {
-  --pink: #f14e95;
-  --bg: #151515;
+  --pink: #ff9ad5;
+  --bg: #393e46;
   --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
 }
 
 body {
   font-size: 1.2rem;
-  font-family: "Work Sans", sans-serif;
+  font-family: "work sans", sans-serif;
   min-height: 4000px;
 }
 /* hero */
@@ -17,7 +17,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(img/bg-prewed.jpg);
+  background-image: url(img/bg.jpg);
   background-size: cover;
   background-position: center;
   z-index: -1;
@@ -41,7 +41,7 @@ body {
 }
 
 .hero h1 {
-  font-family: "Sacramento", cursive;
+  font-family: "Cinzel", cursive;
   font-size: 6rem;
   margin-top: 2rem;
 }
@@ -55,8 +55,8 @@ body {
 }
 
 .hero a {
-  color: var(--pink);
-  background-color: white;
+  color: #393e46;
+  background-color: #f7f7f7;
   box-shadow: var(--shadow);
   animation: heroTextAnim 2s ease-in-out; /* add animation */
   animation-delay: 0.5; /* delay animation by 1s */
@@ -64,8 +64,39 @@ body {
 }
 
 .hero a:hover {
-  background-color: var(--pink);
-  color: white;
+  background-color: #393e46;
+  color: #f7f7f7;
+}
+
+#countdown-wedding {
+  display: flex; /* Pastikan menggunakan flexbox */
+  justify-content: center;
+  flex-wrap: wrap; /* Agar elemen tetap rapih pada layar kecil */
+  gap: 100px; /* Jarak antar elemen */
+  margin-right: 1.5rem;
+}
+
+#countdown-wedding .countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 10px;
+}
+
+#countdown-wedding h5 {
+  font-family: "work sans";
+  font-size: 2rem;
+  margin: 0;
+  font-weight: bold;
+  text-shadow: var(--shadow);
+}
+
+#countdown-wedding span {
+  margin-top: 5px;
+  font-size: 2rem;
+  text-shadow: var(--shadow);
 }
 
 @keyframes heroTextAnim {
@@ -92,7 +123,7 @@ body {
 
 .mynavbar .navbar-brand,
 .mynavbar .offcanvas-title {
-  font-family: "Sacramento", cursive;
+  font-family: "charm", cursive;
   font-size: 3.2rem;
   font-weight: bold;
 }
@@ -114,25 +145,31 @@ body {
 }
 
 .home h2,
-.info h2,
-.story h2,
 .gallery h2,
-.rsvp h2 {
+.rsvp h2,
+.gift h2 {
   color: var(--pink);
-  font-family: "Sacramento";
+  font-family: "palatino";
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.info h2 {
+  color: white;
+  font-family: "palatino";
   font-size: 3.5rem;
   font-weight: bold;
 }
 
 .home h3 {
   color: #444;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin-bottom: 1rem;
 }
 
 .home p {
   font-size: 1.1rem;
-  color: #666;
+  color: #7c7c7c;
 }
 
 .home .couple {
@@ -140,9 +177,9 @@ body {
 }
 
 .home .couple h3 {
-  font-family: "Sacramento";
+  font-family: "charm";
   font-size: 2.4rem;
-  color: var(--pink);
+  color: #393e46;
 }
 
 .home .couple img {
@@ -210,7 +247,7 @@ body {
 }
 
 .info .card {
-  background-color: rgba(255, 255, 255, 0.2) !important;
+  background-color: rgba(255, 255, 255, 0.248) !important;
   color: white !important;
   border: 1px solid #999;
 }
@@ -230,13 +267,27 @@ body {
   font-size: 0.9rem;
   font-weight: 300;
 }
+
+/* Sembunyikan elemen layar kecil secara default */
+.small-screen {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.card-small {
+  justify-content: center;
+  align-items: center;
+  margin-left: 4.7rem;
+  margin-top: 1.5rem;
+}
 /* info end*/
 
 /* story */
-
 .story,
 .gallery,
-.rsvp {
+.rsvp,
+.gift {
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
@@ -253,115 +304,142 @@ body {
 
 .story p,
 .gallery p,
-.rsvp p {
+.rsvp p,
+.gift p {
   font-size: 1rem;
   font-weight: 300;
 }
 
-.timeline {
-  list-style: none;
-  padding: 1.4rem 0;
-  margin-top: 1rem;
-  position: relative;
-}
-
-.timeline::before {
-  content: "";
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  width: 1px;
-  background-color: var(--pink);
-  left: 50%;
-}
-
-.timeline li {
-  margin-bottom: 1.5rem;
-  position: relative;
-}
-
-.timeline li::before,
-.timeline li::after {
-  content: "";
-  display: table;
-}
-
-.timeline li::after {
-  clear: both;
-}
-
-.timeline li .timeline-image {
-  width: 160px;
-  height: 160px;
-  background-color: #ccc;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.timeline li .timeline-panel {
-  width: 40%;
-  float: left;
-  border: 1px solid #ccc;
-  padding: 2rem;
-  position: relative;
-  border-radius: 8px;
-  background-color: #fff;
-}
-
-.timeline li .timeline-panel::before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  border-top: 15px solid transparent;
-  border-left: 15px solid #ccc;
-  border-right: 0 solid #ccc;
-  border-bottom: 15px solid transparent;
-  top: 80px;
-  right: -15px;
-}
-
-.timeline li .timeline-panel::after {
-  content: "";
-  position: absolute;
-  display: inline-block;
-  border-top: 14px solid transparent;
-  border-left: 14px solid #fff;
-  border-right: 0 solid #fff;
-  border-bottom: 14px solid transparent;
-  top: 81px;
-  right: -13px;
-}
-
-.timeline li.timeline-inverted .timeline-panel {
-  float: right;
-}
-
-.timeline li.timeline-inverted .timeline-panel::before {
-  border-left-width: 0;
-  border-right-width: 15px;
-  left: -15px;
-  right: auto;
-}
-
-.timeline li.timeline-inverted .timeline-panel::after {
-  border-left-width: 0;
-  border-right-width: 14px;
-  left: -13px;
-  right: auto;
-}
-/* story end */
-
 /* galery */
 .gallery {
-  background-color: rgba(255, 229, 232, 0.138);
+  background-color: #eeeeee;
 }
 /* galery end */
 
+/* gift */
+.gift .body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "jura", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tombol default */
+.gift .btn-pink {
+  background-color: #393e46;
+  color: rgb(255, 255, 255);
+  transition: all 0.3s ease; /* Animasi transisi halus */
+}
+
+/* Efek hover */
+.gift .btn-pink:hover {
+  background-color: #ffffff; /* Ubah warna latar belakang saat dihover (misalnya pink) */
+  color: #393e46; /* Ubah warna teks saat dihover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan untuk efek hover */
+}
+
+.gift .container2 {
+  position: relative;
+  background-image: url("img/bg-card.png");
+  background-size: cover;
+  padding: 1px 25px;
+  border-radius: 28px;
+  max-width: 380px; /* Ubah nilai ini untuk membuat kartu lebih lebar */
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.gift header,
+.gift .logo {
+  display: flex;
+  flex-direction: column; /* Mengatur elemen dalam kolom */
+  align-items: flex-start; /* Rata kiri */
+  justify-content: flex-start; /* Rata kiri */
+  padding: 10px 0; /* Padding atas dan bawah */
+}
+
+.gift .logo img {
+  width: 95px; /* Ukuran logo */
+  margin-top: -2rem; /* Tambahkan margin negatif untuk mengangkat logo */
+}
+
+.gift header .chip {
+  width: 40px;
+  margin: -1rem 0 -2rem 1.5rem; /* Menggabungkan margin */
+}
+
+.logo2 {
+  width: 85px;
+  margin-left: 15.5rem;
+  margin-top: -11rem;
+  margin-bottom: 2rem;
+}
+
+.gift h5 {
+  font-size: 18px; /* Meningkatkan ukuran font untuk nomor kartu */
+  font-weight: 400;
+  color: white;
+  margin: 10px 0; /* Tambahkan margin untuk jarak */
+}
+
+.gift h6 {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 5px 0; /* Tambahkan margin untuk jarak */
+}
+
+.gift .number {
+  margin-top: 4px;
+  font-size: 1.2rem;
+  letter-spacing: 5px;
+}
+
+.gift .container2 .card-detail {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.gift .container2 .card-detail .name-number,
+.gift .container2 .card-detail {
+  display: flex;
+  flex-direction: column; /* Mengatur elemen dalam kolom */
+  align-items: flex-start; /* Rata kiri */
+}
+
+.gift .container2 .card-detail .valid-date {
+  display: flex; /* Menggunakan flexbox */
+  justify-content: space-between; /* Menyebar elemen di antara ruang yang tersedia */
+  align-items: flex-start; /* Rata tengah secara vertikal */
+  color: white; /* Pastikan teks berwarna putih agar terlihat di latar belakang */
+}
+
+.valid-date h6,
+.valid-date h5 {
+  margin: 0; /* Menghapus margin default */
+}
+
+.valid-date h6 {
+  font-size: 12px; /* Ukuran font untuk "Valid Thru" */
+  font-weight: 400; /* Berat font */
+}
+
+.valid-date h5 {
+  font-size: 15px; /* Ukuran font untuk nomor */
+  font-weight: 400; /* Berat font */
+}
+
+.copy-button {
+  position: absolute; /* Mengatur posisi absolut */
+  top: 20px; /* Jarak dari atas */
+  right: 25px; /* Jarak dari kanan */
+  z-index: 10; /* Pastikan tombol berada di atas elemen lain */
+}
 /* rsvp */
 .rsvp {
   background-color: var(--bg);
@@ -380,28 +458,28 @@ body {
 }
 
 .rsvp button {
-  background-color: var(--pink);
+  background-color: #929aab;
   color: white;
-  border: 1px solid var(--pink);
+  border: 1px solid black;
 }
 
 .rsvp button:hover {
   background-color: white;
-  color: var(--pink);
-  border: 1px solid var(--pink);
+  color: #393e46;
+  border: 1px solid;
 }
 /* rsvp end */
 
 /* footer */
 footer {
   padding: 2rem;
-  background-color: var(--pink);
+  background-color: #929aab;
   color: white;
   margin-top: 0.8rem;
 }
 
 footer a {
-  color: var(--bg);
+  color: #393e46;
   font-weight: bold;
   text-decoration: none;
 }
@@ -452,6 +530,25 @@ footer li {
   .home .heart {
     transform: translateX(-50%) translateY(45px);
   }
+
+  .gift .container2 {
+    max-width: 380px; /* Mengurangi lebar maksimum */
+  }
+
+  .gift h5 {
+    font-size: 16px; /* Mengurangi ukuran font */
+  }
+
+  .gift h6 {
+    font-size: 11px; /* Mengurangi ukuran font */
+  }
+
+  #countdown-wedding {
+    display: flex; /* Pastikan menggunakan flexbox */
+    justify-content: center;
+    flex-wrap: wrap; /* Agar elemen tetap rapih pada layar kecil */
+    gap: 100px;
+  }
 }
 
 /* laptop */
@@ -460,41 +557,66 @@ footer li {
     font-size: 75%;
   }
 
-  .simply-countdown > .simply-section {
-    padding: 65px !important;
-  }
-
   .home .heart {
     display: none;
   }
 
-  .timeline::before {
-    left: 60px;
+  .maps iframe {
+    width: 90%; /* Lebar maps disesuaikan agar lebih kecil di layar kecil */
+    margin: 0; /* Hapus margin kanan dan kiri */
   }
 
-  .timeline li .timeline-image {
-    left: 15px;
-    margin-left: 45px;
-    top: 16px;
+  .gift .container2 {
+    padding: -100px 25px;
+    max-width: 320px; /* Ubah nilai ini untuk membuat kartu lebih lebar */
   }
 
-  .timeline li .timeline-panel {
-    width: calc((100% - 200px));
-    float: right;
+  .gift .logo img {
+    width: 85px; /* Ukuran logo */
+    margin-top: -2rem; /* Tambahkan margin negatif untuk mengangkat logo */
   }
 
-  .timeline li .timeline-panel::before {
-    border-left-width: 0;
-    border-right-width: 15px;
-    left: -15px;
-    right: auto;
+  .gift header .chip {
+    width: 35px;
+    margin-top: -1.5rem;
+    margin-bottom: -3.5rem;
   }
 
-  .timeline li .timeline-panel::after {
-    border-left-width: 0;
-    border-right-width: 14px;
-    left: -13px;
-    right: auto;
+  .logo2 {
+    width: 75px;
+    margin-left: 17rem;
+    margin-top: -12rem; /* Pastikan ini sesuai dengan kebutuhan Anda */
+  }
+
+  .gift .card-detail .name-number {
+    margin-bottom: 1rem;
+  }
+
+  .gift h5 {
+    font-size: 15px; /* Mengurangi ukuran font */
+  }
+
+  .gift h6 {
+    font-size: 15px; /* Mengurangi ukuran font */
+  }
+
+  .gift .valid-date h6 {
+    font-size: 9px;
+  }
+  .gift .valid-date h5 {
+    font-size: 12px;
+  }
+
+  .copy-button {
+    right: 15px; /* Mengurangi jarak dari kanan */
+  }
+
+  #countdown-wedding {
+    display: flex; /* Pastikan menggunakan flexbox */
+    justify-content: center;
+    flex-wrap: wrap; /* Agar elemen tetap rapih pada layar kecil */
+    gap: 0px;
+    margin-left: 1rem;
   }
 }
 
@@ -504,24 +626,103 @@ footer li {
     font-size: 65%;
   }
 
-  .simply-countdown > .simply-section {
-    padding: 55px !important;
-    margin: 5px !important;
-    margin-bottom: 1rem !important;
-  }
-
   .mynavbar .nav-link {
-    font-size: 2rem;
+    font-size: 1.3rem;
     text-align: center;
   }
 
   .sticky-top {
     overflow: hidden;
   }
+  .maps {
+    display: flex;
+    flex-direction: column; /* Maps diatur secara vertikal */
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Jarak antar maps */
+  }
 
-  .timeline li .timeline-image {
-    width: 140px;
-    height: 140px;
+  .maps iframe {
+    width: 75%; /* Lebar maps disesuaikan agar lebih kecil di layar kecil */
+    margin: 0; /* Hapus margin kanan dan kiri */
+  }
+
+  .maps-btn {
+    flex-direction: column; /* Tombol diatur vertikal */
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Jarak antar tombol */
+  }
+
+  /* Sembunyikan elemen layar besar */
+  .large-screen {
+    display: none;
+  }
+
+  /* Tampilkan elemen layar kecil */
+  .small-screen {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-small {
+    justify-content: center;
+    align-items: center;
+    margin-left: 4rem;
+    margin-top: 1.5rem;
+  }
+
+  .gift .container2 {
+    padding: -100px 25px;
+    max-width: 300px; /* Ubah nilai ini untuk membuat kartu lebih lebar */
+  }
+
+  .gift .logo img {
+    width: 85px; /* Ukuran logo */
+    margin-top: -2rem; /* Tambahkan margin negatif untuk mengangkat logo */
+  }
+
+  .gift header .chip {
+    width: 35px;
+    margin-top: -1.5rem;
+    margin-bottom: -3.5rem;
+  }
+
+  .logo2 {
+    width: 70px;
+    margin-left: 19rem;
+    margin-top: -12rem; /* Pastikan ini sesuai dengan kebutuhan Anda */
+  }
+
+  .gift .card-detail .name-number {
+    margin-bottom: 1rem;
+  }
+
+  .gift h5 {
+    font-size: 14px; /* Mengurangi ukuran font */
+  }
+
+  .gift h6 {
+    font-size: 100px; /* Mengurangi ukuran font */
+  }
+
+  .gift .number {
+    font-size: 1.5rem; /* Menyesuaikan ukuran nomor kartu */
+  }
+
+  .gift .name {
+    font-size: 1.1rem;
+  }
+
+  .copy-button {
+    right: 10px; /* Mengurangi jarak dari kanan */
+  }
+
+  #countdown-wedding {
+    display: flex; /* Pastikan menggunakan flexbox */
+    justify-content: center;
+    flex-wrap: wrap; /* Agar elemen tetap rapih pada layar kecil */
+    gap: 0px;
   }
 }
 
@@ -531,27 +732,69 @@ footer li {
     font-size: 60%;
   }
 
-  .simply-countdown > .simply-section {
-    padding: 35px !important;
-    margin: 3px !important;
-    margin-bottom: 1rem !important;
+  .maps {
+    margin-top: 20px;
+    justify-content: center;
   }
 
-  .timeline li .timeline-image {
-    width: 80px;
-    height: 80px;
+  .card-small {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: 3.2rem;
+    margin-top: 1.5rem;
   }
 
-  .timeline li .timeline-panel {
-    width: 65%;
-    transform: translateX(-20px);
+  .gift .container2 {
+    padding: -100px 25px;
+    max-width: 270px; /* Ubah nilai ini untuk membuat kartu lebih lebar */
   }
 
-  .timeline li .timeline-panel::before {
-    top: 30px;
+  .gift .logo img {
+    width: 80px; /* Ukuran logo */
+    margin-top: -2rem; /* Tambahkan margin negatif untuk mengangkat logo */
   }
 
-  .timeline li .timeline-panel::after {
-    top: 31px;
+  .gift header .chip {
+    width: 30px;
+    margin-top: -2rem;
+    margin-bottom: -4rem;
+  }
+
+  .logo2 {
+    width: 55px;
+    margin-left: 19rem;
+    margin-top: -12rem; /* Pastikan ini sesuai dengan kebutuhan Anda */
+  }
+
+  .gift .card-detail .name-number {
+    margin-bottom: 1rem;
+  }
+
+  .gift h5 {
+    font-size: 12px; /* Mengurangi ukuran font */
+  }
+
+  .gift h6 {
+    font-size: 8px; /* Mengurangi ukuran font */
+  }
+
+  .gift .number {
+    font-size: 1.3rem; /* Menyesuaikan ukuran nomor kartu */
+  }
+
+  .gift .name {
+    font-size: 1rem;
+  }
+
+  .gift .valid-date {
+    font-size: 5px;
+  }
+  .gift .valid-date h5 {
+    font-size: 13px;
+  }
+
+  .copy-button {
+    right: 10px; /* Mengurangi jarak dari kanan */
   }
 }

@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Favicon and Icons -->
     <link
       rel="icon"
       type="image/png"
@@ -16,13 +18,19 @@
       sizes="180x180"
       href="img/apple-touch-icon.png"
     />
+
+    <!-- Manifest -->
     <link rel="manifest" href="img/site.webmanifest" />
+
+    <!-- Meta for Apple -->
     <meta name="apple-mobile-web-app-title" content="MyWebSite" />
-    <link rel="manifest" href="img/site.webmanifest" />
 
     <title>The Wedding of Vian & Vera</title>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css" />
 
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -30,17 +38,15 @@
       crossorigin="anonymous"
     />
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Cinzel:wght@400..900&family=Jura:wght@300..700&family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.cdnfonts.com/css/palatino-lt-black"
-      rel="stylesheet"
-    />
 
+    <!-- Font Awesome (Opsional) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -48,7 +54,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- bootsrap icons -->
+
+    <!-- Bootstrap Icons -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
@@ -59,56 +66,61 @@
   </head>
 
   <body>
-    <!-- hero -->
+    <!-- Hero -->
     <section
       id="hero"
-      class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white"
+      class="hero text-center d-flex justify-content-center align-items-center text-white p-3 mx-auto"
+      data-aos="fade-up"
+      data-aos-duration="3000"
     >
-      <main data-aos="fade-up" data-aos-duration="3000">
+      <main>
         <h4>Kepada <span>Bapak/Ibu/Saudara/i,</span></h4>
         <h1>VIAN & VERA</h1>
         <p>Akan melangsungkan pemberkatan pernikahan dalam:</p>
 
+        <!-- Countdown Wedding -->
         <div
           class="row my-3 d-flex justify-content-center"
           id="countdown-wedding"
           data-aos="zoom-in"
           data-aos-duration="3000"
         >
-          <div class="col-lg-1 col-3">
+          <div class="col-lg-2 col-3">
             <div class="text-center p-2 rounded text-light countdown-item">
               <h5>0</h5>
               <span>Hari</span>
             </div>
           </div>
-          <div class="col-lg-1 col-3">
+          <div class="col-lg-2 col-3">
             <div class="text-center p-2 rounded text-light countdown-item">
               <h5>0</h5>
               <span>Jam</span>
             </div>
           </div>
-          <div class="col-lg-1 col-3">
+          <div class="col-lg-2 col-3">
             <div class="text-center p-2 rounded text-light countdown-item">
               <h5>0</h5>
               <span>Menit</span>
             </div>
           </div>
-          <div class="col-lg-1 col-3">
+          <div class="col-lg-2 col-3">
             <div class="text-center p-2 rounded text-light countdown-item">
               <h5>0</h5>
               <span>Detik</span>
             </div>
           </div>
         </div>
-        <a href="#home" class="btn btn-lg" onClick="enableScroll()"
-          ><i
+
+        <a href="#home" class="btn btn-lg" onClick="enableScroll()">
+          <i
             class="fa fa-fw fa-envelope-open-text"
             style="margin-right: 3px"
           ></i
-          >Lihat Undangan</a
-        >
+          >Lihat Undangan
+        </a>
       </main>
     </section>
+
     <!-- Nav -->
     <nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
       <div class="container">
@@ -123,6 +135,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div
           class="offcanvas offcanvas-end"
           tabindex="-1"
@@ -150,7 +163,7 @@
         </div>
       </div>
     </nav>
-    <!-- hero end -->
+    <!-- Hero End -->
 
     <!-- home -->
     <section id="home" class="home">
@@ -161,7 +174,9 @@
             data-aos="fade-up"
             data-aos-duration="1500"
           >
-            <h2 style="color: #393e46">Acara Pemberkatan Pernikahan</h2>
+            <h2 class="section-title" style="color: #393e46">
+              Acara Pemberkatan Pernikahan
+            </h2>
             <h3>
               Diselenggarakan pada 25 Januari 2025 di Surakarta, Jawa Tengah.
             </h3>
@@ -179,25 +194,18 @@
               <div
                 class="col-8 text-end"
                 data-aos="fade-right"
-                data-aos-easing="linear"
                 data-aos-duration="1500"
               >
                 <h3>I Putu Budhi Diovian</h3>
-                <p style="font-size: 1.5rem">Putra Pertama, Anak Sulung</p>
-                <p style="font-size: 1.2rem">
-                  dari Bapak
-                  <span style="font-weight: bold">I Putu Budhi Nanjaya</span>
+                <p class="subtitle">Putra Pertama, Anak Sulung</p>
+                <p class="parent-info">
+                  dari Bapak <strong>I Putu Budhi Nanjaya</strong> <br />dan
                   <br />
-                  dan <br />
-                  Ibu <span style="font-weight: bold">Ruciwati</span>
+                  Ibu
+                  <strong>Ruciwati</strong>
                 </p>
               </div>
-              <div
-                class="col-4"
-                data-aos="fade-right"
-                data-aos-easing="linear"
-                data-aos-duration="1300"
-              >
+              <div class="col-4" data-aos="fade-right" data-aos-duration="1300">
                 <img
                   src="img/vian2.png"
                   alt="Vian"
@@ -211,68 +219,37 @@
 
           <div class="col-lg-6">
             <div class="row">
-              <div
-                class="col-4"
-                class="col-4"
-                data-aos="fade-left"
-                data-aos-easing="linear"
-                data-aos-duration="1300"
-              >
+              <div class="col-4" data-aos="fade-left" data-aos-duration="1300">
                 <img
                   src="img/vera2.png"
                   alt="Vera"
                   class="img-responsive rounded-circle"
                 />
               </div>
-              <div
-                class="col-8"
-                class="col-4"
-                data-aos="fade-left"
-                data-aos-easing="linear"
-                data-aos-duration="1300"
-              >
+              <div class="col-8" data-aos="fade-left" data-aos-duration="1300">
                 <h3>Fidelia Vera Sentosa</h3>
-                <p style="font-size: 1.5rem">Putri ke-3, Anak Bungsu</p>
-                <p style="font-size: 1.2rem">
-                  dari Ibu <span style="font-weight: bold">Lani Kristanti</span>
+                <p class="subtitle">Putri ke-3, Anak Bungsu</p>
+                <p class="parent-info">
+                  dari Ibu <strong>Lani Kristanti</strong>
                 </p>
               </div>
             </div>
           </div>
 
           <div
-            style="
-              margin-top: 3rem;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-            "
+            style="margin-top: 4rem; font-family: cinzel"
             class="col-md-8 mx-auto text-center"
             data-aos="fade-up"
-            data-aos-easing="linear"
             data-aos-duration="1000"
           >
-            <p
-              style="
-                font-family: Cinzel, serif;
-                font-weight: 550;
-                line-height: 1.5;
-              "
-            >
+            <p class="verse" style="font-weight: 550; line-height: 1.5">
               Dan firman-Nya: Sebab itu laki-laki akan meninggalkan ayah dan
               ibunya dan bersatu dengan istrinya, sehingga keduanya itu menjadi
               satu daging. Demikianlah mereka bukan lagi dua, melainkan satu.
               Karena itu, apa yang telah dipersatukan Allah, tidak boleh
               diceraikan manusia.
             </p>
-            <p
-              style="
-                font-family: Cinzel, serif;
-                font-weight: 650;
-                line-height: 1.5;
-              "
-            >
+            <p class="reference" style="font-weight: 650; line-height: 1.5">
               Matius 19 ayat 5-6
             </p>
           </div>
@@ -298,24 +275,25 @@
               <div
                 style="
                   display: flex;
-                  justify-content: space-between;
-                  margin-top: 20px;
                   justify-content: center;
-                  gap: 20px; /* Menambahkan jarak antar maps */
+                  margin-top: 20px;
+                  gap: 20px;
                 "
                 class="maps"
               >
+                <!-- Google Maps: GKI Coyudan -->
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.00687886257!2d110.81978091024918!3d-7.574227592408458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a15d49ad903e1%3A0x4a6320da72e8a518!2sGKI%20Coyudan!5e0!3m2!1sid!2sid!4v1727028460452!5m2!1sid!2sid"
                   width="100%"
                   height="250"
-                  style="border: 0; gap: 4rem"
+                  style="border: 0"
                   allowfullscreen=""
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
                   class="maps-coyudan"
                 ></iframe>
 
+                <!-- Google Maps: Orient Restaurant -->
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.109444198552!2d110.79509311024901!3d-7.563045092419419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a142e6a625149%3A0x308ee876f76d28c5!2sOrient%20Restaurant!5e0!3m2!1sid!2sid!4v1734522702215!5m2!1sid!2sid"
                   width="100%"
@@ -337,13 +315,13 @@
                   margin-bottom: 15px;
                 "
               >
+                <!-- Buttons for opening maps -->
                 <a
                   href="https://maps.app.goo.gl/quqwNQ65B6zudngF8"
                   target="_blank"
                   class="btn btn-light btn-sm coyudanbtn"
                   >GKI COYUDAN</a
                 >
-
                 <a
                   href="https://maps.app.goo.gl/H6itihA6nC3k2H5t5"
                   target="_blank"
@@ -359,10 +337,10 @@
               </p>
             </div>
           </div>
+
           <div class="row justify-content-center mt-4">
             <div
-              class="col-md-5 col-10"
-              class="col-8 text-end"
+              class="col-md-5 col-10 text-end"
               data-aos="fade-right"
               data-aos-offset="300"
               data-aos-easing="linear"
@@ -389,25 +367,16 @@
                 <a
                   href="https://www.google.com/calendar/render?action=TEMPLATE&text=Pemberkatan+dan+Peneguhan+Ekumenis&details=Pemberkatan+Pernikahan+Vian+%26+Vera&location=GKI+Coyudan+Surakarta%2FSolo&dates=20250125T070000Z%2F20250125T090000Z"
                   class="btn btn-lg btn-pink rounded-pill"
+                  style="color: #f7f7f7"
                   target="_blank"
-                  style="
-                    margin-bottom: 3rem;
-                    display: flex; /* Menjadikan tombol sebagai flex container */
-                    justify-content: center; /* Memusatkan konten secara horizontal */
-                    align-items: center; /* Memusatkan konten secara vertikal */
-                    margin: 0 auto; /* Memusatkan tombol */
-                    color: white; /* Warna teks */
-                    border: 10rem; /* Menghapus border default */
-                    padding: 0.5rem 2rem; /* Menambahkan padding untuk ukuran tombol */
-                  "
                 >
                   <i class="fas fa-fw fa-calendar-day"></i> Simpan ke Kalender
                 </a>
               </div>
             </div>
+
             <div
-              class="col-md-5 col-10"
-              class="col-8 text-end"
+              class="col-md-5 col-10 text-end"
               data-aos="fade-left"
               data-aos-offset="300"
               data-aos-easing="linear"
@@ -434,17 +403,8 @@
                 <a
                   href="https://www.google.com/calendar/render?action=TEMPLATE&text=Intimate+Dinner&details=Dinner+bersama+keluarga+dan+teman-teman+Vian+%26+Vera&location=Orient+Restaurant&dates=20250125T110000Z%2F20250125T140000Z"
                   class="btn btn-lg btn-pink rounded-pill"
+                  style="color: #f7f7f7"
                   target="_blank"
-                  style="
-                    margin-bottom: 3rem;
-                    display: flex; /* Menjadikan tombol sebagai flex container */
-                    justify-content: center; /* Memusatkan konten secara horizontal */
-                    align-items: center; /* Memusatkan konten secara vertikal */
-                    margin: 0 auto; /* Memusatkan tombol */
-                    color: white; /* Warna teks */
-                    border: 10rem; /* Menghapus border default */
-                    padding: 0.5rem 2rem; /* Menambahkan padding untuk ukuran tombol */
-                  "
                 >
                   <i class="fas fa-fw fa-calendar-day"></i> Simpan ke Kalender
                 </a>
@@ -453,10 +413,10 @@
           </div>
         </div>
       </div>
+
       <!-- small screen -->
       <div class="small-screen">
         <div class="col-md-8 col-10 text-center mx-auto">
-          <!-- Menambahkan mx-auto untuk memusatkan -->
           <h2
             data-aos="fade-down"
             data-aos-easing="linear"
@@ -477,7 +437,7 @@
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.00687886257!2d110.81978091024918!3d-7.574227592408458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a15d49ad903e1%3A0x4a6320da72e8a518!2sGKI%20Coyudan!5e0!3m2!1sid!2sid!4v1727028460452!5m2!1sid!2sid"
               width="50%"
               height="230"
-              style="border: 0; gap: 4rem"
+              style="border: 0"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
@@ -509,7 +469,7 @@
                   </div>
                   <div class="col-md-6">
                     <i class="bi bi-calendar4-event d-block"></i>
-                    <span>Sabtu, 25 Januari 2024</span>
+                    <span>Sabtu, 25 Januari 2025</span>
                   </div>
                 </div>
               </div>
@@ -520,17 +480,8 @@
               <a
                 href="https://www.google.com/calendar/render?action=TEMPLATE&text=Pemberkatan+dan+Peneguhan+Ekumenis&details=Pemberkatan+Pernikahan+Vian+%26+Vera&location=GKI+Coyudan+Surakarta%2FSolo&dates=20250125T070000Z%2F20250125T090000Z"
                 class="btn btn-lg btn-pink rounded-pill"
+                style="color: #f7f7f7"
                 target="_blank"
-                style="
-                  margin-bottom: 3rem;
-                  display: flex; /* Menjadikan tombol sebagai flex container */
-                  justify-content: center; /* Memusatkan konten secara horizontal */
-                  align-items: center; /* Memusatkan konten secara vertikal */
-                  margin: 0 auto; /* Memusatkan tombol */
-                  color: white; /* Warna teks */
-                  border: 10rem; /* Menghapus border default */
-                  padding: 0.5rem 2rem; /* Menambahkan padding untuk ukuran tombol */
-                "
               >
                 <i class="fas fa-fw fa-calendar-day"></i> Simpan ke Kalender
               </a>
@@ -547,7 +498,7 @@
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.109444129084!2d110.7976734!3d-7.5630451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a142e6a625149%3A0x308ee876f76d28c5!2sOrient%20Restaurant!5e0!3m2!1sid!2sid!4v1734607808590!5m2!1sid!2sid"
               height="230"
-              style="border: 0; gap: 4rem"
+              style="border: 0"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
@@ -558,9 +509,10 @@
               target="_blank"
               class="btn btn-light btn-sm orientbtn"
               style="margin-top: 1rem"
-              >ORIENT RESTAURANT</a
+              >ORIENT RESTAURANT (Lt.1)</a
             >
           </div>
+
           <div
             class="col-md-5 col-10 card-small mx-auto"
             data-aos="fade-up"
@@ -568,7 +520,7 @@
             data-aos-duration="1700"
           >
             <div class="card text-center text-bg-light">
-              <div class="card-header">Intimate Dinner (Lt.1)</div>
+              <div class="card-header">Intimate Dinner</div>
               <div class="card-body">
                 <div class="row justify-content-center">
                   <div class="col-md-6">
@@ -577,7 +529,7 @@
                   </div>
                   <div class="col-md-6">
                     <i class="bi bi-calendar4-event d-block"></i>
-                    <span>Sabtu, 25 Januari 2024</span>
+                    <span>Sabtu, 25 Januari 2025</span>
                   </div>
                 </div>
               </div>
@@ -587,18 +539,9 @@
               </div>
               <a
                 href="https://www.google.com/calendar/render?action=TEMPLATE&text=Intimate+Dinner&details=Dinner+bersama+keluarga+dan+teman-teman+Vian+%26+Vera&location=Orient+Restaurant&dates=20250125T110000Z%2F20250125T140000Z"
-                class="btn btn-lg btn-pink rounded-pill mb-1"
+                class="btn btn-lg btn-white rounded-pill mb-1"
+                style="color: #f7f7f7"
                 target="_blank"
-                style="
-                  margin-bottom: 3rem;
-                  display: flex; /* Menjadikan tombol sebagai flex container */
-                  justify-content: center; /* Memusatkan konten secara horizontal */
-                  align-items: center; /* Memusatkan konten secara vertikal */
-                  margin: 0 auto; /* Memusatkan tombol */
-                  color: white; /* Warna teks */
-                  border: 10rem; /* Menghapus border default */
-                  padding: 0.5rem 2rem; /* Menambahkan padding untuk ukuran tombol */
-                "
               >
                 <i class="fas fa-fw fa-calendar-day"></i> Simpan ke Kalender
               </a>
@@ -641,13 +584,14 @@
         >
           <div class="col mt-3">
             <a
-              href="img/1.jpg"
+              href="img/thumbnail/1.jpg"
               data-toggle="lightbox"
               data-caption="Vian & Vera"
               data-gallery="mygallery"
             >
               <img
                 src="img/thumbnail/1.jpg"
+                loading="lazy"
                 alt="Vian & Vera"
                 class="img-fluid w-100 rounded"
                 style="border: 2px solid black"
@@ -656,13 +600,14 @@
           </div>
           <div class="col mt-3">
             <a
-              href="img/2.jpg"
+              href="img/thumbnail/2.jpg"
               data-toggle="lightbox"
               data-caption="Vian & Vera"
               data-gallery="mygallery"
             >
               <img
                 src="img/thumbnail/2.jpg"
+                loading="lazy"
                 alt="Vian & Vera"
                 class="img-fluid w-100 rounded"
                 style="border: 2px solid black"
@@ -671,13 +616,14 @@
           </div>
           <div class="col mt-3">
             <a
-              href="img/3.jpg"
+              href="img/thumbnail/3.jpg"
               data-toggle="lightbox"
               data-caption="Vian & Vera"
               data-gallery="mygallery"
             >
               <img
                 src="img/thumbnail/3.jpg"
+                loading="lazy"
                 alt="Vian & Vera"
                 class="img-fluid w-100 rounded"
                 style="border: 2px solid black"
@@ -686,13 +632,14 @@
           </div>
           <div class="col mt-3">
             <a
-              href="img/4.jpg"
+              href="img/thumbnail/4.jpg"
               data-toggle="lightbox"
               data-caption="Vian & Vera"
               data-gallery="mygallery"
             >
               <img
                 src="img/thumbnail/4.jpg"
+                loading="lazy"
                 alt="Vian & Vera"
                 class="img-fluid w-100 rounded"
                 style="border: 2px solid black"
@@ -701,13 +648,14 @@
           </div>
           <div class="col mt-3">
             <a
-              href="img/5.jpg"
+              href="img/thumbnail/5.jpg"
               data-toggle="lightbox"
               data-caption="VIan & Vera"
               data-gallery="mygallery"
             >
               <img
                 src="img/thumbnail/5.jpg"
+                loading="lazy"
                 alt="VIan & Vera"
                 class="img-fluid w-100 rounded"
                 style="border: 2px solid black"
@@ -723,6 +671,7 @@
             >
               <img
                 src="img/thumbnail/6.jpg"
+                loading="lazy"
                 alt="Vian & Vera"
                 class="img-fluid w-100 rounded"
                 style="border: 2px solid black"
@@ -738,107 +687,103 @@
     <section id="gift" class="gift py-5" style="padding-top: 100px">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="row justify-content-center">
-            <div class="col-md-8 col-10 text-center">
-              <h2 class="huruf-sambung" style="color: #393e46">Wedding Gift</h2>
-              <p>
-                Bagi Bapak/Ibu/Saudara/i yang ingin mengirimkan hadiah
-                pernikahan dapat melalui virtual account atau e-wallet di bawah
-                ini.
-              </p>
-            </div>
-            <div class="row justify-content-center">
-              <div class="col-lg-6 text-center">
-                <button
-                  type="button"
-                  class="text-center btn btn-lg btn-pink mb-4 rounded-pill"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseHadiah"
+          <div class="col-md-8 col-10 text-center">
+            <h2 class="huruf-sambung" style="color: #393e46">Wedding Gift</h2>
+            <p>
+              Bagi Bapak/Ibu/Saudara/i yang ingin mengirimkan hadiah pernikahan
+              dapat melalui virtual account atau e-wallet di bawah ini.
+            </p>
+          </div>
+          <div class="col-lg-6 text-center">
+            <button
+              type="button"
+              class="text-center btn btn-lg btn-pink mb-4 rounded-pill"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseHadiah"
+            >
+              <i class="fa fa-fw fa-gift"></i> Kirim Hadiah
+            </button>
+
+            <!-- Vian -->
+            <div class="gift collapse body" id="collapseHadiah">
+              <div class="container2">
+                <header>
+                  <span class="logo">
+                    <img src="img/Logo BCA_Putih.png" alt="" />
+                  </span>
+                  <img src="img/chip.png" alt="" class="chip" />
+                </header>
+                <div class="card-detail">
+                  <div
+                    class="name-number"
+                    style="margin-bottom: 7rem; margin-left: 1.5rem"
+                  >
+                    <h5 class="number">898 049 8639</h5>
+                    <div class="valid-date" style="margin-left: 0.1rem">
+                      <h6>
+                        Valid <br />
+                        Thru
+                      </h6>
+                      <h5 style="margin-left: 0.7rem; margin-top: 0.2rem">
+                        25/01/25
+                      </h5>
+                    </div>
+                    <h6 class="name">I PUTU BUDHI DIOVIAN</h6>
+                  </div>
+                  <img class="logo2" src="img/logo.png" alt="" />
+                </div>
+                <a
+                  style="cursor: pointer"
+                  onclick="copyText(this)"
+                  class="copy-button btn btn-light mt3"
                 >
-                  <i class="fa fa-fw fa-gift"></i> Kirim Hadiah
-                </button>
+                  <i class="fas fa-fw fa-copy"></i> Copy
+                </a>
+              </div>
+            </div>
 
-                <!-- Vian -->
-                <div class="gift collapse body" id="collapseHadiah">
-                  <div class="container2">
-                    <header>
-                      <span class="logo">
-                        <img src="img/Logo BCA_Putih.png" alt="" />
-                      </span>
-                      <img src="img/chip.png" alt="" class="chip" />
-                    </header>
-                    <div class="card-detail">
-                      <div
-                        class="name-number"
-                        style="margin-bottom: 7rem; margin-left: 1.5rem"
-                      >
-                        <h5 class="number">898 049 8639</h5>
-                        <div class="valid-date" style="margin-left: 0.1rem">
-                          <h6>
-                            Valid <br />
-                            Thru
-                          </h6>
-                          <h5 style="margin-left: 0.7rem; margin-top: 0.2rem">
-                            25/01/25
-                          </h5>
-                        </div>
-                        <h6 class="name">I PUTU BUDHI DIOVIAN</h6>
-                      </div>
-                      <img class="logo2" src="img/logo.png" alt="" />
+            <!-- Vera -->
+            <div class="gift collapse body" id="collapseHadiah">
+              <div class="container2" style="margin-top: 1rem">
+                <header>
+                  <span class="logo">
+                    <img src="img/Logo BCA_Putih.png" alt="" />
+                  </span>
+                  <img src="img/chip.png" alt="" class="chip" />
+                </header>
+                <div class="card-detail">
+                  <div
+                    class="name-number"
+                    style="margin-bottom: 7rem; margin-left: 1.5rem"
+                  >
+                    <h5 class="number">773 525 2020</h5>
+                    <div class="valid-date" style="margin-left: 0.1rem">
+                      <h6>
+                        Valid <br />
+                        Thru
+                      </h6>
+                      <h5 style="margin-left: 0.7rem; margin-top: 0.2rem">
+                        25/01/25
+                      </h5>
                     </div>
-                    <a
-                      style="cursor: pointer"
-                      onclick="copyText(this)"
-                      class="copy-button btn btn-light mt3"
-                    >
-                      <i class="fas fa-fw fa-copy"></i> Copy
-                    </a>
+                    <h6 class="name">FIDELIA VERA SENTOSA</h6>
                   </div>
+                  <img class="logo2" src="img/logo.png" alt="" />
                 </div>
-
-                <!-- Vera -->
-                <div class="gift collapse body" id="collapseHadiah">
-                  <div class="container2" style="margin-top: 1rem">
-                    <header>
-                      <span class="logo">
-                        <img src="img/Logo BCA_Putih.png" alt="" />
-                      </span>
-                      <img src="img/chip.png" alt="" class="chip" />
-                    </header>
-                    <div class="card-detail">
-                      <div
-                        class="name-number"
-                        style="margin-bottom: 7rem; margin-left: 1.5rem"
-                      >
-                        <h5 class="number">773 525 2020</h5>
-                        <div class="valid-date" style="margin-left: 0.1rem">
-                          <h6>
-                            Valid <br />
-                            Thru
-                          </h6>
-                          <h5 style="margin-left: 0.7rem; margin-top: 0.2rem">
-                            25/01/25
-                          </h5>
-                        </div>
-                        <h6 class="name">FIDELIA VERA SENTOSA</h6>
-                      </div>
-                      <img class="logo2" src="img/logo.png" alt="" />
-                    </div>
-                    <a
-                      style="cursor: pointer"
-                      onclick="copyText(this)"
-                      class="copy-button btn btn-light mt3"
-                    >
-                      <i class="fas fa-fw fa-copy"></i> Copy
-                    </a>
-                  </div>
-                </div>
+                <a
+                  style="cursor: pointer"
+                  onclick="copyText(this)"
+                  class="copy-button btn btn-light mt3"
+                >
+                  <i class="fas fa-fw fa-copy"></i> Copy
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- gift end -->
 
     <!-- rsvp -->
     <section id="rsvp" class="rsvp">
@@ -855,9 +800,12 @@
           action="https://script.google.com/macros/s/AKfycbyN4WCkvOGmD5j5FOQ0VLyEdoHd7Q3jncIHu2gKnlD_1rgcQyEmtZQbmcetyy63xPtQBg/exec"
           id="my-form"
         >
+          <!-- Nama -->
           <div class="col-12">
             <div class="mb-3">
-              <label for="nama" class="form-label">Nama</label>
+              <label for="nama" class="form-label" aria-label="Nama"
+                >Nama</label
+              >
               <input
                 type="text"
                 class="form-control"
@@ -869,15 +817,13 @@
             </div>
           </div>
 
+          <!-- Jumlah -->
           <div class="col-12">
             <div class="mb-3">
-              <label for="jumlah" class="form-label">Jumlah</label>
-              <select
-                class="form-select"
-                id="jumlah"
-                name="jumlah"
-                required
+              <label for="jumlah" class="form-label" aria-label="Jumlah"
+                >Jumlah</label
               >
+              <select class="form-select" id="jumlah" name="jumlah" required>
                 <option value="" disabled selected>Pilih salah satu</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -885,20 +831,28 @@
             </div>
           </div>
 
+          <!-- Konfirmasi Kehadiran -->
           <div class="col-12">
             <div class="mb-3">
-              <label for="status" class="form-label">Konfirmasi</label>
+              <label
+                for="status"
+                class="form-label"
+                aria-label="Konfirmasi Kehadiran"
+                >Konfirmasi</label
+              >
               <select name="status" id="status" class="form-select" required>
                 <option value="" disabled selected>Pilih salah satu</option>
-                <option value="hadir">Hadir (Gereja)</option>
-                <option value="hadir">Hadir (Orient)</option>
-                <option value="hadir">Hadir Keduanya</option>
+                <option value="gereja">Hadir (Gereja)</option>
+                <option value="orient">Hadir (Orient)</option>
+                <option value="keduanya">Hadir Keduanya</option>
                 <option value="tidak hadir">Tidak Hadir</option>
               </select>
             </div>
           </div>
+
+          <!-- Button Kirim -->
           <div class="col-12" style="margin-top: 30px">
-            <button class="btn btn-primary">Kirim</button>
+            <button type="submit" class="btn btn-primary">Kirim</button>
           </div>
         </form>
       </div>
@@ -941,12 +895,19 @@
     </div>
     <!-- audio end -->
 
+    <script src="scripts.js"></script>
+
+    <!-- jQuery (pastikan dimuat terlebih dahulu jika menggunakan jQuery) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
 
+    <!-- Lightbox JS -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox.min.js"
       integrity="sha512-KbRFbjA5bwNan6DvPl1ODUolvTTZ/vckssnFhka5cG80JVa5zSlRPCr055xSgU/q6oMIGhZWLhcbgIC0fyw3RQ=="
@@ -954,184 +915,11 @@
       referrerpolicy="no-referrer"
     ></script>
 
+    <!-- BS5 Lightbox -->
     <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
 
+    <!-- AOS (Animate on Scroll) -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <script>
-      const offcanvas = document.querySelector(".offcanvas");
-      const hamburger = document.querySelector(".navbar-toggler");
-      const stickyTop = document.querySelector(".sticky-top");
-
-      hamburger.addEventListener("click", function () {
-        stickyTop.style.overflow = "visible";
-      });
-
-      offcanvas.addEventListener("hidden.bs.offcanvas", function () {
-        stickyTop.style.overflow = "hidden";
-      });
-    </script>
-
-    <script>
-      const rootElement = document.querySelector(":root");
-      const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
-      const audioIcon = document.querySelector(".audio-icon-wrapper i");
-      const song = document.querySelector("#song");
-      let isPlaying = false;
-
-      function disableScroll() {
-        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-
-        window.onscroll = function () {
-          window.scrollTo(scrollTop, scrollLeft);
-        };
-
-        rootElement.style.scrollBehavior = "auto";
-      }
-
-      function enableScroll() {
-        window.onscroll = function () {};
-        rootElement.style.scrollBehavior = "smooth";
-        // localStorage.setItem("opened", "true");
-        playAudio();
-      }
-
-      function playAudio() {
-        song.volume = 0.1;
-        audioIconWrapper.style.display = "flex";
-        song.play();
-        isPlaying = true;
-      }
-
-      audioIconWrapper.onclick = function () {
-        if (isPlaying) {
-          song.pause();
-          audioIcon.classList.remove("bi-disc");
-          audioIcon.classList.add("bi-pause-circle");
-        } else {
-          song.play();
-          audioIcon.classList.add("bi-disc");
-          audioIcon.classList.remove("bi-pause-circle");
-        }
-
-        isPlaying = !isPlaying;
-      };
-
-      // if (!localStorage.getItem("opened")) {
-      //   disableScroll();
-      // }
-      disableScroll();
-    </script>
-
-    <script>
-      window.addEventListener("load", function () {
-        const form = document.getElementById("my-form");
-        form.addEventListener("submit", function (e) {
-          e.preventDefault();
-          const data = new FormData(form);
-          const action = e.target.action;
-          fetch(action, {
-            method: "POST",
-            body: data,
-          }).then(() => {
-            alert("Konfirmasi kehadiran berhasil terkirim!");
-          });
-        });
-      });
-    </script>
-
-    <script>
-      const urlParams = new URLSearchParams(window.location.search);
-      const nama = urlParams.get("n") || "";
-      const pronoun = urlParams.get("p") || "Bapak/Ibu/Saudara/i";
-      const namaContainer = document.querySelector(".hero h4 span");
-      namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ",");
-
-      document.querySelector("#nama").value = nama;
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const offcanvasNavbar = document.getElementById("offcanvasNavbar");
-        const navLinks = document.querySelectorAll(".nav-link");
-        const bsOffcanvas = new bootstrap.Offcanvas(offcanvasNavbar);
-
-        navLinks.forEach((link) => {
-          link.addEventListener("click", function () {
-            bsOffcanvas.hide();
-          });
-        });
-      });
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        AOS.init({
-          once: false,
-        });
-      });
-    </script>
-
-    <script>
-      function copyText(element) {
-        // Ambil teks yang ingin disalin
-        const textToCopy =
-          element.parentElement.querySelector(".number").innerText; // Mengambil teks dari elemen dengan kelas 'number'
-
-        // Buat elemen textarea untuk menyalin teks
-        const textarea = document.createElement("textarea");
-        textarea.value = textToCopy;
-        document.body.appendChild(textarea);
-
-        // Pilih teks di textarea
-        textarea.select();
-        textarea.setSelectionRange(0, 99999); // Untuk mobile devices
-
-        // Salin teks ke clipboard
-        document.execCommand("copy");
-
-        // Hapus textarea setelah menyalin
-        document.body.removeChild(textarea);
-
-        // Ubah teks tombol menjadi "Berhasil disalin"
-        $(element).html("Berhasil disalin!");
-
-        // Kembalikan teks tombol setelah 2 detik
-        setTimeout(function () {
-          $(element).html('<i class="fas fa-fw fa-copy"></i> Copy');
-        }, 2000);
-      }
-    </script>
-
-    <script>
-      document
-        .getElementById("my-form")
-        .addEventListener("submit", function (event) {
-          const statusSelect = document.getElementById("status");
-          if (statusSelect.value === "") {
-            event.preventDefault(); // Mencegah pengiriman formulir
-            alert("Konfirmasi wajib dipilih!"); // Menampilkan pesan kesalahan
-          }
-        });
-    </script>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        $('a[href="#gift"]').on("click", function (event) {
-          event.preventDefault();
-          $("html, body").animate(
-            {
-              scrollTop: $("#gift").offset().top - 200,
-            },
-            100
-          ); // Durasi animasi
-        });
-      });
-    </script>
 
     <script>
       var countdownDate = new Date("Jan 25, 2025 14:00:00").getTime();

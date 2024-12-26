@@ -10,7 +10,7 @@
       sizes="96x96"
     />
     <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico?" />
+    <link rel="shortcut icon" href="img/favicon.ico" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -161,33 +161,14 @@
             data-aos="fade-up"
             data-aos-duration="1500"
           >
-            <h2 style="color: #393e46">Acara Pemberkatan Nikah</h2>
+            <h2 style="color: #393e46">Acara Pemberkatan Pernikahan</h2>
             <h3>
-              Diselenggarakan pada 25 Januari 2025 di Solo/Surakarta, Jawa
-              Tengah.
+              Diselenggarakan pada 25 Januari 2025 di Surakarta, Jawa Tengah.
             </h3>
             <p>
               Oleh karena itu, dengan segala hormat, kami bermaksud untuk
-              mengundang Bapak/Ibu, Saudara/i, untuk hadir pada acara
-              pemberkatan nikah kami.
-            </p>
-          </div>
-          <br />
-          <div
-            class="col-md-8 text-center"
-            data-aos="fade-up"
-            data-aos-easing="linear"
-            data-aos-duration="1000"
-          >
-            <p style="font-family: cinzel; font-weight: 550">
-              Dan firman-Nya: Sebab itu laki-laki akan meninggalkan ayah dan
-              ibunya dan bersatu dengan istrinya, sehingga keduanya itu menjadi
-              satu daging. Demikianlah mereka bukan lagi dua, melainkan satu.
-              Karena itu, apa yang telah dipesatukan Allah, tidak boleh
-              diceraikan manusia.
-            </p>
-            <p style="font-family: cinzel; font-weight: 650">
-              Matius 19 ayat 5-6
+              mengundang Bapak/Ibu, Saudara/i, untuk hadir pada acara pernikahan
+              kami.
             </p>
           </div>
         </div>
@@ -257,6 +238,43 @@
                 </p>
               </div>
             </div>
+          </div>
+
+          <div
+            style="
+              margin-top: 3rem;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+            "
+            class="col-md-8 mx-auto text-center"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="1000"
+          >
+            <p
+              style="
+                font-family: Cinzel, serif;
+                font-weight: 550;
+                line-height: 1.5;
+              "
+            >
+              Dan firman-Nya: Sebab itu laki-laki akan meninggalkan ayah dan
+              ibunya dan bersatu dengan istrinya, sehingga keduanya itu menjadi
+              satu daging. Demikianlah mereka bukan lagi dua, melainkan satu.
+              Karena itu, apa yang telah dipersatukan Allah, tidak boleh
+              diceraikan manusia.
+            </p>
+            <p
+              style="
+                font-family: Cinzel, serif;
+                font-weight: 650;
+                line-height: 1.5;
+              "
+            >
+              Matius 19 ayat 5-6
+            </p>
           </div>
         </div>
       </div>
@@ -330,7 +348,7 @@
                   href="https://maps.app.goo.gl/H6itihA6nC3k2H5t5"
                   target="_blank"
                   class="btn btn-light btn-sm orientbtn"
-                  >ORIENT RESTAURANT</a
+                  >ORIENT RESTAURANT (Lt.1)</a
                 >
               </div>
 
@@ -360,7 +378,7 @@
                     </div>
                     <div class="col-md-6">
                       <i class="bi bi-calendar4-event d-block"></i>
-                      <span>Sabtu, 25 Januari 2024</span>
+                      <span>Sabtu, 25 Januari 2025</span>
                     </div>
                   </div>
                 </div>
@@ -396,7 +414,7 @@
               data-aos-duration="1500"
             >
               <div class="card text-center text-bg-light">
-                <div class="card-header">Intimate Dinner (LT.1)</div>
+                <div class="card-header">Intimate Dinner</div>
                 <div class="card-body">
                   <div class="row justify-content-center">
                     <div class="col-md-6">
@@ -405,7 +423,7 @@
                     </div>
                     <div class="col-md-6">
                       <i class="bi bi-calendar4-event d-block"></i>
-                      <span>Sabtu, 25 Januari 2024</span>
+                      <span>Sabtu, 25 Januari 2025</span>
                     </div>
                   </div>
                 </div>
@@ -761,7 +779,7 @@
                             Thru
                           </h6>
                           <h5 style="margin-left: 0.7rem; margin-top: 0.2rem">
-                            01/25/25
+                            25/01/25
                           </h5>
                         </div>
                         <h6 class="name">I PUTU BUDHI DIOVIAN</h6>
@@ -799,7 +817,7 @@
                             Thru
                           </h6>
                           <h5 style="margin-left: 0.7rem; margin-top: 0.2rem">
-                            01/25/25
+                            25/01/25
                           </h5>
                         </div>
                         <h6 class="name">FIDELIA VERA SENTOSA</h6>
@@ -850,28 +868,31 @@
               />
             </div>
           </div>
+
           <div class="col-12">
             <div class="mb-3">
               <label for="jumlah" class="form-label">Jumlah</label>
-              <input
-                type="number"
-                class="form-control"
+              <select
+                class="form-select"
                 id="jumlah"
                 name="jumlah"
-                min="1"
-                max="2"
-                length="1"
-                value="1"
                 required
-              />
+              >
+                <option value="" disabled selected>Pilih salah satu</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
             </div>
           </div>
+
           <div class="col-12">
             <div class="mb-3">
               <label for="status" class="form-label">Konfirmasi</label>
               <select name="status" id="status" class="form-select" required>
                 <option value="" disabled selected>Pilih salah satu</option>
-                <option value="hadir">Hadir</option>
+                <option value="hadir">Hadir (Gereja)</option>
+                <option value="hadir">Hadir (Orient)</option>
+                <option value="hadir">Hadir Keduanya</option>
                 <option value="tidak hadir">Tidak Hadir</option>
               </select>
             </div>

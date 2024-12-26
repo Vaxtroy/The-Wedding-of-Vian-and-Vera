@@ -9,7 +9,7 @@ body {
   font-family: "work sans", sans-serif;
   min-height: 4000px;
 }
-/* hero */
+/* Hero */
 .hero::before {
   content: "";
   position: absolute;
@@ -33,11 +33,10 @@ body {
 .hero h4,
 .hero p {
   text-shadow: var(--shadow);
-  text-shadow: var(--shadow);
   opacity: 0; /* initial opacity */
   animation: heroTextAnim 2s ease-in-out; /* add animation */
-  animation-delay: 0.5; /* delay animation by 1s */
-  animation-fill-mode: forwards; /* add this to retain final state */
+  animation-delay: 0.5s; /* delay animation */
+  animation-fill-mode: forwards; /* retain final state */
 }
 
 .hero h1 {
@@ -59,8 +58,8 @@ body {
   background-color: #f7f7f7;
   box-shadow: var(--shadow);
   animation: heroTextAnim 2s ease-in-out; /* add animation */
-  animation-delay: 0.5; /* delay animation by 1s */
-  animation-fill-mode: forwards; /* add this to retain final state */
+  animation-delay: 0.5s; /* delay animation */
+  animation-fill-mode: forwards; /* retain final state */
 }
 
 .hero a:hover {
@@ -73,7 +72,6 @@ body {
   justify-content: center;
   flex-wrap: wrap; /* Agar elemen tetap rapih pada layar kecil */
   gap: 100px; /* Jarak antar elemen */
-  margin-right: 1.5rem;
 }
 
 #countdown-wedding .countdown-item {
@@ -86,7 +84,7 @@ body {
 }
 
 #countdown-wedding h5 {
-  font-family: "work sans";
+  font-family: "Work Sans", sans-serif;
   font-size: 2rem;
   margin: 0;
   font-weight: bold;
@@ -99,6 +97,7 @@ body {
   text-shadow: var(--shadow);
 }
 
+/* Animasi hero */
 @keyframes heroTextAnim {
   0% {
     opacity: 0;
@@ -109,9 +108,33 @@ body {
     transform: translateY(0);
   }
 }
-/* hero end */
 
-/* navbar */
+/* Responsif */
+@media (max-width: 768px) {
+  #countdown-wedding {
+    gap: 50px; /* Mengurangi jarak antar elemen pada layar kecil */
+  }
+
+  #countdown-wedding h5,
+  #countdown-wedding span {
+    font-size: 1.5rem; /* Menyesuaikan ukuran font pada layar kecil */
+  }
+}
+
+@media (max-width: 576px) {
+  #countdown-wedding {
+    gap: 30px; /* Mengurangi jarak lebih lanjut pada layar sangat kecil */
+  }
+
+  #countdown-wedding h5,
+  #countdown-wedding span {
+    font-size: 1.2rem; /* Menyesuaikan ukuran font lebih kecil pada layar kecil */
+  }
+}
+
+/* Hero end */
+
+/* Navbar */
 .mynavbar {
   background-image: linear-gradient(to bottom, #ffffff84, #ffffff00);
   backdrop-filter: blur(3px);
@@ -123,7 +146,7 @@ body {
 
 .mynavbar .navbar-brand,
 .mynavbar .offcanvas-title {
-  font-family: "charm", cursive;
+  font-family: "Charm", cursive;
   font-size: 3.2rem;
   font-weight: bold;
 }
@@ -132,7 +155,22 @@ body {
   text-transform: uppercase;
   font-weight: 500;
 }
-/* navbar end*/
+
+/* Responsif Navbar */
+@media (max-width: 768px) {
+  .mynavbar .navbar-brand {
+    font-size: 2.5rem; /* Mengurangi ukuran font pada layar kecil */
+  }
+
+  .mynavbar .offcanvas-title {
+    font-size: 2.5rem; /* Mengurangi ukuran font pada layar kecil */
+  }
+
+  .mynavbar .nav-link {
+    font-size: 1rem; /* Menyesuaikan ukuran font untuk nav-link di perangkat kecil */
+  }
+}
+/* Navbar end */
 
 /* home */
 .home {
@@ -148,15 +186,15 @@ body {
 .gallery h2,
 .rsvp h2,
 .gift h2 {
-  color: var(--pink);
-  font-family: "palatino";
+  color: var(--pink, #f48fb1); /* Default pink color */
+  font-family: "Palatino", serif;
   font-size: 3.5rem;
   font-weight: bold;
 }
 
 .info h2 {
   color: white;
-  font-family: "palatino";
+  font-family: "Palatino", serif;
   font-size: 3.5rem;
   font-weight: bold;
 }
@@ -177,13 +215,15 @@ body {
 }
 
 .home .couple h3 {
-  font-family: "charm";
+  font-family: "Charm", cursive;
   font-size: 2.4rem;
   color: #393e46;
 }
 
 .home .couple img {
   width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 .home .heart {
@@ -196,14 +236,14 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%) translateY(65px);
-  z-index: 1; /* Add this line */
-  animation: heartPulse 1s ease-in-out infinite; /* add animation */
+  z-index: 1;
+  animation: heartPulse 1s ease-in-out infinite;
 }
 
 .home .heart i {
   margin: auto;
-  color: var(--pink);
-  animation: heartSpin 5s ease-in-out infinite; /* add animation */
+  color: var(--pink, #f48fb1);
+  animation: heartSpin 5s ease-in-out infinite;
 }
 
 /* Animations */
@@ -229,7 +269,8 @@ body {
 }
 /* home end*/
 
-/* info */
+/* Info Section */
+/* Info Section */
 .info {
   background-color: var(--bg);
   color: white;
@@ -268,6 +309,28 @@ body {
   font-weight: 300;
 }
 
+/* Memastikan desain tombol tetap seperti yang diminta */
+.info .btn-light {
+  background-color: #f8f9fa;
+  color: #000;
+  font-weight: 500;
+  padding: 0.5rem 2rem; /* Padding tetap seperti sebelumnya */
+  border-radius: 5px;
+  border: none;
+  text-transform: uppercase;
+}
+
+.info .btn-light:hover {
+  background-color: #e2e6ea;
+  color: #000;
+}
+
+/* Button Kecil */
+.info .btn-sm {
+  padding: 8px 25px; /* Padding lebih kecil untuk tombol kecil */
+  font-size: 0.9rem; /* Ukuran font lebih kecil */
+}
+
 /* Sembunyikan elemen layar kecil secara default */
 .small-screen {
   display: none;
@@ -283,8 +346,6 @@ body {
 }
 /* info end*/
 
-/* story */
-.story,
 .gallery,
 .rsvp,
 .gift {
@@ -292,7 +353,6 @@ body {
   padding-bottom: 8rem;
 }
 
-.story span,
 .gallery span {
   text-transform: uppercase;
   color: #ccc;
@@ -302,7 +362,6 @@ body {
   margin-bottom: 1rem;
 }
 
-.story p,
 .gallery p,
 .rsvp p,
 .gift p {
@@ -336,7 +395,7 @@ body {
 
 /* Efek hover */
 .gift .btn-pink:hover {
-  background-color: #ffffff; /* Ubah warna latar belakang saat dihover (misalnya pink) */
+  background-color: #ffffff; /* Ubah warna latar belakang saat dihover */
   color: #393e46; /* Ubah warna teks saat dihover */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan untuk efek hover */
 }
@@ -347,8 +406,9 @@ body {
   background-size: cover;
   padding: 1px 25px;
   border-radius: 28px;
-  max-width: 380px; /* Ubah nilai ini untuk membuat kartu lebih lebar */
+  max-width: 380px; /* Ukuran kartu */
   width: 100%;
+  box-sizing: border-box; /* Menggunakan box-sizing agar padding tidak mempengaruhi ukuran */
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -358,17 +418,17 @@ body {
   flex-direction: column; /* Mengatur elemen dalam kolom */
   align-items: flex-start; /* Rata kiri */
   justify-content: flex-start; /* Rata kiri */
-  padding: 10px 0; /* Padding atas dan bawah */
+  padding: 10px 0;
 }
 
 .gift .logo img {
-  width: 95px; /* Ukuran logo */
-  margin-top: -2rem; /* Tambahkan margin negatif untuk mengangkat logo */
+  width: 95px;
+  margin-top: -2rem;
 }
 
 .gift header .chip {
   width: 40px;
-  margin: -1rem 0 -2rem 1.5rem; /* Menggabungkan margin */
+  margin: -1rem 0 -2rem 1.5rem;
 }
 
 .logo2 {
@@ -379,17 +439,17 @@ body {
 }
 
 .gift h5 {
-  font-size: 18px; /* Meningkatkan ukuran font untuk nomor kartu */
+  font-size: 18px;
   font-weight: 400;
   color: white;
-  margin: 10px 0; /* Tambahkan margin untuk jarak */
+  margin: 10px 0;
 }
 
 .gift h6 {
   color: white;
   font-size: 0.9rem;
   font-weight: 400;
-  margin: 5px 0; /* Tambahkan margin untuk jarak */
+  margin: 5px 0;
 }
 
 .gift .number {
@@ -408,49 +468,56 @@ body {
 .gift .container2 .card-detail .name-number,
 .gift .container2 .card-detail {
   display: flex;
-  flex-direction: column; /* Mengatur elemen dalam kolom */
-  align-items: flex-start; /* Rata kiri */
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .gift .container2 .card-detail .valid-date {
-  display: flex; /* Menggunakan flexbox */
-  justify-content: space-between; /* Menyebar elemen di antara ruang yang tersedia */
-  align-items: flex-start; /* Rata tengah secara vertikal */
-  color: white; /* Pastikan teks berwarna putih agar terlihat di latar belakang */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: white;
 }
 
 .valid-date h6,
 .valid-date h5 {
-  margin: 0; /* Menghapus margin default */
+  margin: 0;
 }
 
 .valid-date h6 {
-  font-size: 12px; /* Ukuran font untuk "Valid Thru" */
-  font-weight: 400; /* Berat font */
+  font-size: 12px;
+  font-weight: 400;
 }
 
 .valid-date h5 {
-  font-size: 15px; /* Ukuran font untuk nomor */
-  font-weight: 400; /* Berat font */
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .copy-button {
-  position: absolute; /* Mengatur posisi absolut */
-  top: 20px; /* Jarak dari atas */
-  right: 25px; /* Jarak dari kanan */
-  z-index: 10; /* Pastikan tombol berada di atas elemen lain */
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 10;
 }
+/* gift end */
+
 /* rsvp */
 .rsvp {
-  background-color: var(--bg);
+  background-color: var(
+    --bg,
+    #393e46
+  ); /* Ensure a fallback color if --bg is not defined */
 }
 
 .rsvp h2 {
   font-size: 4.5rem;
+  margin-bottom: 1rem;
 }
 
 .rsvp p {
   color: white;
+  font-size: 1.1rem;
 }
 
 .rsvp form label {
@@ -460,14 +527,17 @@ body {
 .rsvp button {
   background-color: #929aab;
   color: white;
-  border: 1px solid black;
+  border: 1px solid #929aab; /* Consistent border color with button */
+  transition: all 0.3s ease;
 }
 
 .rsvp button:hover {
   background-color: white;
   color: #393e46;
-  border: 1px solid;
+  border: 1px solid #393e46; /* Match hover state with text color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
 }
+
 /* rsvp end */
 
 /* footer */
@@ -634,6 +704,7 @@ footer li {
   .sticky-top {
     overflow: hidden;
   }
+
   .maps {
     display: flex;
     flex-direction: column; /* Maps diatur secara vertikal */

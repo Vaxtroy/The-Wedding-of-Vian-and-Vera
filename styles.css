@@ -72,6 +72,7 @@ body {
   justify-content: center;
   flex-wrap: wrap; /* Agar elemen tetap rapih pada layar kecil */
   gap: 100px; /* Jarak antar elemen */
+  margin-right: 1rem;
 }
 
 #countdown-wedding .countdown-item {
@@ -108,30 +109,6 @@ body {
     transform: translateY(0);
   }
 }
-
-/* Responsif */
-@media (max-width: 768px) {
-  #countdown-wedding {
-    gap: 50px; /* Mengurangi jarak antar elemen pada layar kecil */
-  }
-
-  #countdown-wedding h5,
-  #countdown-wedding span {
-    font-size: 1.5rem; /* Menyesuaikan ukuran font pada layar kecil */
-  }
-}
-
-@media (max-width: 576px) {
-  #countdown-wedding {
-    gap: 30px; /* Mengurangi jarak lebih lanjut pada layar sangat kecil */
-  }
-
-  #countdown-wedding h5,
-  #countdown-wedding span {
-    font-size: 1.2rem; /* Menyesuaikan ukuran font lebih kecil pada layar kecil */
-  }
-}
-
 /* Hero end */
 
 /* Navbar */
@@ -667,7 +644,7 @@ footer li {
   }
 
   .gift h6 {
-    font-size: 15px; /* Mengurangi ukuran font */
+    font-size: 10px; /* Mengurangi ukuran font */
   }
 
   .gift .valid-date h6 {

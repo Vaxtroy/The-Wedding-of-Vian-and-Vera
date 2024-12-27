@@ -164,7 +164,7 @@ body {
 .rsvp h2,
 .gift h2 {
   color: var(--pink, #f48fb1); /* Default pink color */
-  font-family: "Palatino", serif;
+  font-family: "PLayfair Display", serif;
   font-size: 3.5rem;
   font-weight: bold;
 }
@@ -223,6 +223,88 @@ body {
   animation: heartSpin 5s ease-in-out infinite;
 }
 
+/* CSS untuk penataan elemen */
+.home .event-text {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #393e46;
+  padding: 10px 10px;
+  margin-top: -2rem;
+}
+
+.home .border-left {
+  border-left: 2px solid #b0b0b0;
+}
+
+.home .height-12 {
+  height: 2.5rem; /* Set height for the border */
+  margin-bottom: 3rem;
+}
+
+/* Vian Instagram Button */
+.vian-instagram-button-container {
+  position: relative;
+  text-align: center;
+}
+
+.vian-instagram-button-container .instagram-button-vian {
+  background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af);
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 40%;
+  border: none;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  bottom: -15px; /* Mengatur tombol berada di bawah gambar */
+  left: 50%;
+  transform: translateX(-50%); /* Menempatkan tombol di tengah */
+  text-decoration: none;
+}
+
+.vian-instagram-button-container .instagram-button-vian:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.1) translateX(-50%);
+}
+
+/* Vera Instagram Button */
+.vera-instagram-button-container {
+  position: relative;
+  text-align: center;
+}
+
+.vera-instagram-button-container .instagram-button-vera {
+  background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af);
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 40%;
+  border: none;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  bottom: -15px; /* Mengatur tombol berada di bawah gambar */
+  left: 50%;
+  transform: translateX(-50%); /* Menempatkan tombol di tengah */
+  text-decoration: none;
+}
+
+.vera-instagram-button-container .instagram-button-vera:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.1) translateX(-50%);
+}
+
 /* Animations */
 @keyframes heartPulse {
   0% {
@@ -246,7 +328,6 @@ body {
 }
 /* home end*/
 
-/* Info Section */
 /* Info Section */
 .info {
   background-color: var(--bg);
@@ -352,6 +433,44 @@ body {
 }
 /* galery end */
 
+/* rsvp */
+.rsvp {
+  background-color: var(
+    --bg,
+    #393e46
+  ); /* Ensure a fallback color if --bg is not defined */
+}
+
+.rsvp h2 {
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+}
+
+.rsvp p {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.rsvp form label {
+  color: white;
+}
+
+.rsvp button {
+  background-color: #929aab;
+  color: white;
+  border: 1px solid #929aab; /* Consistent border color with button */
+  transition: all 0.3s ease;
+}
+
+.rsvp button:hover {
+  background-color: white;
+  color: #393e46;
+  border: 1px solid #393e46; /* Match hover state with text color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}
+
+/* rsvp end */
+
 /* gift */
 .gift .body {
   margin: 0;
@@ -379,7 +498,7 @@ body {
 
 .gift .container2 {
   position: relative;
-  background-image: url("img/bg-card.png");
+  background-image: url("img/mandiri.jpg");
   background-size: cover;
   padding: 1px 25px;
   border-radius: 28px;
@@ -400,7 +519,13 @@ body {
 
 .gift .logo img {
   width: 95px;
-  margin-top: -2rem;
+  margin-top: -1.5rem;
+}
+
+.gift .logo-mandiri img {
+  width: 95px;
+  margin-top: 0.5rem;
+  margin-left: 0.2rem;
 }
 
 .gift header .chip {
@@ -413,6 +538,13 @@ body {
   margin-left: 15.5rem;
   margin-top: -11rem;
   margin-bottom: 2rem;
+}
+
+.logo2-visa {
+  width: 90px;
+  margin-left: 15rem;
+  margin-top: -12rem;
+  margin-bottom: 1rem;
 }
 
 .gift h5 {
@@ -478,44 +610,6 @@ body {
   z-index: 10;
 }
 /* gift end */
-
-/* rsvp */
-.rsvp {
-  background-color: var(
-    --bg,
-    #393e46
-  ); /* Ensure a fallback color if --bg is not defined */
-}
-
-.rsvp h2 {
-  font-size: 4.5rem;
-  margin-bottom: 1rem;
-}
-
-.rsvp p {
-  color: white;
-  font-size: 1.1rem;
-}
-
-.rsvp form label {
-  color: white;
-}
-
-.rsvp button {
-  background-color: #929aab;
-  color: white;
-  border: 1px solid #929aab; /* Consistent border color with button */
-  transition: all 0.3s ease;
-}
-
-.rsvp button:hover {
-  background-color: white;
-  color: #393e46;
-  border: 1px solid #393e46; /* Match hover state with text color */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
-}
-
-/* rsvp end */
 
 /* footer */
 footer {
@@ -665,6 +759,19 @@ footer li {
     gap: 0px;
     margin-left: 1rem;
   }
+
+  .gift .logo-mandiri img {
+    width: 95px;
+    margin-top: 0.5rem;
+    margin-left: 0.2rem;
+  }
+
+  .logo2-visa {
+    width: 80px;
+    margin-left: 17rem;
+    margin-top: -13rem;
+    margin-bottom: 1rem;
+  }
 }
 
 /* tablet */
@@ -766,6 +873,19 @@ footer li {
     right: 10px; /* Mengurangi jarak dari kanan */
   }
 
+  .gift .logo-mandiri img {
+    width: 95px;
+    margin-top: 0.5rem;
+    margin-left: 0.2rem;
+  }
+
+  .logo2-visa {
+    width: 77px;
+    margin-left: 18rem;
+    margin-top: -14rem;
+    margin-bottom: 1rem;
+  }
+
   #countdown-wedding {
     display: flex; /* Pastikan menggunakan flexbox */
     justify-content: center;
@@ -844,5 +964,18 @@ footer li {
 
   .copy-button {
     right: 10px; /* Mengurangi jarak dari kanan */
+  }
+
+  .gift .logo-mandiri img {
+    width: 95px;
+    margin-top: 0.5rem;
+    margin-left: 0.2rem;
+  }
+
+  .logo2-visa {
+    width: 65px;
+    margin-left: 17.5rem;
+    margin-top: -14rem;
+    margin-bottom: 1rem;
   }
 }
